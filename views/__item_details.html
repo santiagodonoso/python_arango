@@ -9,7 +9,11 @@
     <div class="mb-4">
         <span class="text-w-bold">{{ item["item_price"] }}</span> Dkk.
     </div>
-    <a href="/items/{{ item['_key'] }}" class="d-flex j-content-center a-items-center mt-auto h-10 rounded-sm bg-c-blue:+16 text-c-white text-w-700">
+    <a href="/items/{{ item['_key'] }}" 
+    class="d-flex j-content-center a-items-center mt-auto h-10 rounded-sm bg-c-yellow:+16 text-c-black text-w-700">
+        Quick order
+    </a>    
+    <a href="/items/{{ item['_key'] }}" class="d-flex j-content-center a-items-center mt-4 h-10 rounded-sm bg-c-blue:+16 text-c-white text-w-700">
         View in separate window
     </a>
 </div>
