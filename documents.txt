@@ -1,0 +1,179 @@
+FOR item IN [
+  {
+    "_key": "1",
+    "item_id": "a3d0e37d-5075-4dc2-9eb7-00a679b97167",
+    "item_title": "Item 1",
+    "item_description": "A delicious cheeseburger with freshly grilled beef and melted cheese.",
+    "item_image_path": "/images/1.jpg",
+    "item_price": 5.99
+  },
+  {
+    "_key": "2",
+    "item_id": "b7de12f4-1324-4f29-9e28-2f765e003f92",
+    "item_title": "Item 2",
+    "item_description": "A crispy chicken sandwich with lettuce, tomatoes, and mayo.",
+    "item_image_path": "/images/2.jpg",
+    "item_price": 6.49
+  },
+  {
+    "_key": "3",
+    "item_id": "2c9b5296-25f9-4d7d-929b-25b61298fc63",
+    "item_title": "Item 3",
+    "item_description": "A large serving of golden, crispy French fries.",
+    "item_image_path": "/images/3.jpg",
+    "item_price": 2.99
+  },
+  {
+    "_key": "4",
+    "item_id": "12d9209e-bff4-4c82-8ff9-d3b9c9d046a5",
+    "item_title": "Item 4",
+    "item_description": "A refreshing soda with your choice of flavor, served ice cold.",
+    "item_image_path": "/images/4.jpg",
+    "item_price": 1.99
+  },
+  {
+    "_key": "5",
+    "item_id": "ad35c7d5-8c4c-43a5-957d-4c98d71a7f6b",
+    "item_title": "Item 5",
+    "item_description": "A hot and savory pepperoni pizza with a crispy crust.",
+    "item_image_path": "/images/5.jpg",
+    "item_price": 8.99
+  },
+  {
+    "_key": "6",
+    "item_id": "da632e59-c24b-4d16-845b-739e4b7919c6",
+    "item_title": "Item 6",
+    "item_description": "A creamy milkshake made with real ice cream, available in vanilla, chocolate, or strawberry.",
+    "item_image_path": "/images/6.jpg",
+    "item_price": 3.99
+  },
+  {
+    "_key": "7",
+    "item_id": "f08cb8b5-c80f-4b69-9c69-cb1b2097ff8a",
+    "item_title": "Item 7",
+    "item_description": "A spicy chicken wrap with fresh vegetables and tangy sauce.",
+    "item_image_path": "/images/7.jpg",
+    "item_price": 4.99
+  },
+  {
+    "_key": "8",
+    "item_id": "4b9a093d-3e25-42b3-b20a-993dc02efb50",
+    "item_title": "Item 8",
+    "item_description": "A side of mozzarella sticks with a warm marinara dipping sauce.",
+    "item_image_path": "/images/8.jpg",
+    "item_price": 4.49
+  },
+  {
+    "_key": "9",
+    "item_id": "3c1c19ea-49d1-4f3f-b074-53f19fb10d55",
+    "item_title": "Item 9",
+    "item_description": "A juicy double cheeseburger with extra toppings and secret sauce.",
+    "item_image_path": "/images/9.jpg",
+    "item_price": 7.99
+  },
+  {
+    "_key": "10",
+    "item_id": "bc067177-cbe5-4c7e-95da-961b88d02885",
+    "item_title": "Item 10",
+    "item_description": "A grilled chicken salad with a light vinaigrette and fresh vegetables.",
+    "item_image_path": "/images/10.jpg",
+    "item_price": 6.99
+  },
+  {
+    "_key": "11",
+    "item_id": "7fa0ab7a-6ef0-4d6b-9a37-5bb00d52d948",
+    "item_title": "Item 11",
+    "item_description": "A pack of crispy onion rings, served with a zesty dipping sauce.",
+    "item_image_path": "/images/11.jpg",
+    "item_price": 3.49
+  },
+  {
+    "_key": "12",
+    "item_id": "ae8c7460-2e4d-4e5b-8db2-85b4a0b6e9c9",
+    "item_title": "Item 12",
+    "item_description": "A chocolate chip cookie, freshly baked and warm.",
+    "item_image_path": "/images/12.jpg",
+    "item_price": 1.49
+  }
+]
+INSERT item INTO items
+RETURN "items"
+
+
+
+
+
+FOR user IN [
+  {
+    "_key": "1",
+    "user_name": "Alice",
+    "user_email": "a@a.com",
+    "user_password": "password",
+    "user_created_at": "1633024800"
+  },
+  {
+    "_key": "2",
+    "user_name": "Bob",
+    "user_email": "bob@example.com",
+    "user_password": "password",
+    "user_created_at": "1633111200"
+  },
+  {
+    "_key": "3",
+    "user_name": "Charlie",
+    "user_email": "charlie@example.com",
+    "user_password": "password",
+    "user_created_at": "1633197600"
+  },
+  {
+    "_key": "4",
+    "user_name": "David",
+    "user_email": "david@example.com",
+    "user_password": "password",
+    "user_created_at": "1633284000"
+  },
+  {
+    "_key": "5",
+    "user_name": "Eve",
+    "user_email": "eve@example.com",
+    "user_password": "password",
+    "user_created_at": "1633370400"
+  },
+  {
+    "_key": "6",
+    "user_name": "Frank",
+    "user_email": "frank@example.com",
+    "user_password": "password",
+    "user_created_at": "1633456800"
+  },
+  {
+    "_key": "7",
+    "user_name": "Grace",
+    "user_email": "grace@example.com",
+    "user_password": "password",
+    "user_created_at": "1633543200"
+  },
+  {
+    "_key": "8",
+    "user_name": "Hank",
+    "user_email": "hank@example.com",
+    "user_password": "password",
+    "user_created_at": "1633629600"
+  },
+  {
+    "_key": "9",
+    "user_name": "Ivy",
+    "user_email": "ivy@example.com",
+    "user_password": "password",
+    "user_created_at": "1633716000"
+  },
+  {
+    "_key": "10",
+    "user_name": "Jack",
+    "user_email": "jack@example.com",
+    "user_password": "password",
+    "user_created_at": "1633802400"
+  }
+]
+INSERT user INTO users
+RETURN "users"

@@ -1,0 +1,58 @@
+% import time
+
+%include("_top")
+
+ 
+ 
+<main class="container py-8 mx-auto h-full pt-20">
+    <div class="rounded-sm overflow-hidden">
+        <div class="d-flex flex-col">
+            <div
+                class="d-flex py-4 a-content-center p-content-center bg-c-charocoal:+3 text-c-body border-b-1 border-c-charocoal:+5">
+                <div class="px-6 flex-1 text-w-medium">Username</div>
+                <div class="px-6 flex-1 text-w-medium">Email</div>
+                <div class="px-6 flex-1 text-w-medium">First Name</div>
+            </div>
+            <div id="users">
+                % for user in users:
+                <div id="u{{ user['user_pk'] }}" class="d-flex px-2 a-content-center p-content-center bg-c-charocoal:-9"
+                    odd="bg-c-charocoal:-5">
+                    <div class="py-1 flex-1 text-c-body:-6 text-sm a-content-center">
+                        {{ user["user_username"] }}
+                    </div>
+                    <div class="py-1 flex-1 text-c-body:-6 text-sm a-content-center">
+                        {{ user["user_email"] }}
+                    </div>
+                    <div class="py-1 flex-1 text-c-body:-6 text-sm a-content-center">
+                        {{ user["user_name"] }}
+                    </div>
+                    <div class="py-1 flex-1 d-flex p-content-end">
+ 
+                        % if user["user_deleted_at"] == 0:
+                            % if user["user_blocked_at"] == 0:
+                                %include("___btn_block_user.html")
+                            % else:
+                                %include("___btn_unblock_user.html")
+                            % end
+                        % end
+
+                        % if user["user_deleted_at"] == 0:
+                            <button class="bg-none text-c-body px-3 py-1 rounded-sm h-10 w-10 cursor-pointer"
+                                title="Delete User" mix-get="/users/delete/{{user['user_pk']}}">
+                                🗑️
+                            </button>
+                        % else:
+                            % user_deleted_at = time.localtime(user['user_deleted_at'])
+                            % user_deleted_at = time.strftime('%A, %d %B %Y', user_deleted_at)
+                            <div class="text-c-white d-flex a-items-center">deleted at: {{ user_deleted_at }}</div>
+                        % end
+                    </div>
+                </div>
+                % end
+            </div>
+        </div>
+    </div>
+</main>
+ 
+ 
+%include("_bottom")

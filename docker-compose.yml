@@ -1,0 +1,26 @@
+services:
+  python_app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: wolt_container
+    depends_on:
+      - arangodb
+    volumes:
+      - .:/app
+    ports:
+      - 80:80  # Expose Python app
+
+ 
+  arangodb:
+    image: arangodb:latest
+    container_name: arangodb_container
+    environment:
+      ARANGO_ROOT_PASSWORD: password
+    volumes:
+      - arangodb_data:/var/lib/arangodb3
+    ports:
+      - "8529:8529"  # Expose ArangoDB's default port
+
+volumes:
+  arangodb_data:

@@ -1,0 +1,16 @@
+<div class="item w-full d-flex flex-col overflow-hidden">
+    <img src="{{ item["item_image_path"] }}" class="h-50 obj-f-cover rounded-sm" sm="">
+    <div class="text-w-800 text-150">
+        {{ item["item_title"] }}
+    </div>
+    <div>
+        {{ item["item_description"] }}
+    </div>
+    <div class="mb-4">
+        <span class="text-w-bold">{{ item["item_price"] }}</span> Dkk.
+    </div>
+    <a href="/items/{{ item['_key'] }}" mix-get="/items/{{ item['_key'] }}" 
+    class="d-flex j-content-center a-items-center mt-auto h-10 rounded-sm bg-c-gray:+10 text-c-white text-w-700">
+        More
+    </a>
+</div>

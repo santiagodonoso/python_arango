@@ -1,0 +1,21 @@
+% include("_top")
+
+<main class="w-full pt-14 pb-40" sm="">
+    <div  class="d-grid gap-8 px-4 j-items-center" sm="cols-6" md="cols-5" lg="cols-6">
+        <div id="items" class="d-grid gap-4" md="cols-2 c-start-1 c-end-4" lg="cols-3 c-start-1 c-end-5">
+        % for item in items:
+            % include("__item.html")
+        % end
+        % include("___btn_get_more_items", next_page=2)
+        </div>
+        <div id="item_details" class="w-full" sm="c-start-4 c-end-6">
+            DETAILS
+        </div>
+    </div>
+
+   
+
+</main>
+
+ 
+% include("_bottom")

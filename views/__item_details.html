@@ -1,0 +1,15 @@
+<div class="item p-sticky top-14  w-full d-flex flex-col overflow-hidden overflow-y">
+    <img src="{{ item["item_image_path"] }}" class="w-full obj-f-cover rounded-sm" sm="">
+    <div class="text-w-800 text-150">
+        {{ item["item_title"] }}
+    </div>
+    <div>
+        {{ item["item_description"] }}
+    </div>
+    <div class="mb-4">
+        <span class="text-w-bold">{{ item["item_price"] }}</span> Dkk.
+    </div>
+    <a href="/items/{{ item['_key'] }}" class="d-flex j-content-center a-items-center mt-auto h-10 rounded-sm bg-c-blue:+16 text-c-white text-w-700">
+        View in separate window
+    </a>
+</div>
